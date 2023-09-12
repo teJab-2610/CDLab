@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    int num = 42;
+    int *ptr; // Declare a pointer to an integer
+
+    ptr = &num; // Assign the address of 'num' to the pointer
+
+    printf("Value of 'num': %d\n", num);
+    printf("Address of 'num': %p\n", &num);
+    printf("Value of 'ptr' (address of 'num'): %p\n", ptr);
+    printf("Value at the address pointed by 'ptr': %d\n", *ptr); // Dereferencing the pointer
+
+    // Changing the value through the pointer
+    *ptr = 100;
+    printf("New value of 'num' after changing through pointer: %d\n", num);
+
+    // Working with arrays and pointers
+    int arr[] = {10, 20, 30, 40, 50};
+    int *arrPtr = arr; // Point the pointer to the beginning of the array
+
+    printf("\nUsing pointers with arrays:\n");
+    for (int i = 0; i < 5; ++i) {
+        printf("Value at index %d: %d\n", i, *(arrPtr + i)); // Accessing array elements through pointers
+    }
+
+    return 0;
+}
+

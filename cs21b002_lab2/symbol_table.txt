@@ -1,0 +1,214 @@
+
+Doing lexical analysis on the given input......
+ANALYSIS DONE
+RESULT :
+Token			|			Lexeme	
+
+Preprocessor			#include <stdio.h>
+Keyword				int
+Identifier			binarySearch
+Circular parenthesis		(
+Keyword				int
+Identifier			arr
+Square parenthesis		[
+Square parenthesis		]
+Punctuation			,
+Keyword				int
+Identifier			left
+Punctuation			,
+Keyword				int
+Identifier			right
+Punctuation			,
+Keyword				int
+Identifier			target
+Circular parenthesis		)
+Curly Brace			{
+Keyword				while
+Circular parenthesis		(
+Identifier			left
+Relational operator		<=
+Identifier			right
+Circular parenthesis		)
+Curly Brace			{
+Keyword				int
+Identifier			mid
+Arithmetic Operator		=
+Identifier			left
+Arithmetic Operator		+
+Circular parenthesis		(
+Identifier			right
+Arithmetic Operator		-
+Identifier			left
+Circular parenthesis		)
+Arithmetic Operator		/
+INTEGER				2
+Punctuation			;
+Keyword				if
+Circular parenthesis		(
+Identifier			arr
+Square parenthesis		[
+Identifier			mid
+Square parenthesis		]
+Relational operator		==
+Identifier			target
+Circular parenthesis		)
+Curly Brace			{
+Keyword				return
+Identifier			mid
+Punctuation			;
+Curly Brace			}
+Keyword				if
+Circular parenthesis		(
+Identifier			arr
+Square parenthesis		[
+Identifier			mid
+Square parenthesis		]
+Relational operator		<
+Identifier			target
+Circular parenthesis		)
+Curly Brace			{
+Identifier			left
+Arithmetic Operator		=
+Identifier			mid
+Arithmetic Operator		+
+INTEGER				1
+Punctuation			;
+Curly Brace			}
+Keyword				else
+Curly Brace			{
+Identifier			right
+Arithmetic Operator		=
+Identifier			mid
+Arithmetic Operator		-
+INTEGER				1
+Punctuation			;
+Curly Brace			}
+Curly Brace			}
+Keyword				return
+INTEGER				-1
+Punctuation			;
+Curly Brace			}
+Keyword				int
+Identifier			main
+Circular parenthesis		(
+Circular parenthesis		)
+Curly Brace			{
+Keyword				int
+Identifier			n
+Punctuation			;
+Identifier			printf
+Circular parenthesis		(
+String literal			"Enter the number of elements in the array: "
+Circular parenthesis		)
+Punctuation			;
+Identifier			scanf
+Circular parenthesis		(
+String literal			"%d"
+Punctuation			,
+Bitwise Operator		&
+Identifier			n
+Circular parenthesis		)
+Punctuation			;
+Keyword				int
+Identifier			arr
+Square parenthesis		[
+Identifier			n
+Square parenthesis		]
+Punctuation			;
+Identifier			printf
+Circular parenthesis		(
+String literal			"Enter %d sorted elements:\n"
+Punctuation			,
+Identifier			n
+Circular parenthesis		)
+Punctuation			;
+Keyword				for
+Circular parenthesis		(
+Keyword				int
+Identifier			i
+Arithmetic Operator		=
+INTEGER				0
+Punctuation			;
+Identifier			i
+Relational operator		<
+Identifier			n
+Punctuation			;
+Arithmetic Operator		++
+Identifier			i
+Circular parenthesis		)
+Curly Brace			{
+Identifier			scanf
+Circular parenthesis		(
+String literal			"%d"
+Punctuation			,
+Bitwise Operator		&
+Identifier			arr
+Square parenthesis		[
+Identifier			i
+Square parenthesis		]
+Circular parenthesis		)
+Punctuation			;
+Curly Brace			}
+Keyword				int
+Identifier			target
+Punctuation			;
+Identifier			printf
+Circular parenthesis		(
+String literal			"Enter the element to search for: "
+Circular parenthesis		)
+Punctuation			;
+Identifier			scanf
+Circular parenthesis		(
+String literal			"%d"
+Punctuation			,
+Bitwise Operator		&
+Identifier			target
+Circular parenthesis		)
+Punctuation			;
+Keyword				int
+Identifier			result
+Arithmetic Operator		=
+Identifier			binarySearch
+Circular parenthesis		(
+Identifier			arr
+Punctuation			,
+INTEGER				0
+Punctuation			,
+Identifier			n
+Arithmetic Operator		-
+INTEGER				1
+Punctuation			,
+Identifier			target
+Circular parenthesis		)
+Punctuation			;
+Keyword				if
+Circular parenthesis		(
+Identifier			result
+Arithmetic Operator		!=
+INTEGER				-1
+Circular parenthesis		)
+Curly Brace			{
+Identifier			printf
+Circular parenthesis		(
+String literal			"Element %d found at index %d.\n"
+Punctuation			,
+Identifier			target
+Punctuation			,
+Identifier			result
+Circular parenthesis		)
+Punctuation			;
+Curly Brace			}
+Keyword				else
+Curly Brace			{
+Identifier			printf
+Circular parenthesis		(
+String literal			"Element %d not found in the array.\n"
+Punctuation			,
+Identifier			target
+Circular parenthesis		)
+Punctuation			;
+Curly Brace			}
+Keyword				return
+INTEGER				0
+Punctuation			;
+Curly Brace			}
